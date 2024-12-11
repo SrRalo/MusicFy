@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reproductor - MusicFy</title>
+    <link rel="stylesheet" href="css/styles.css">
+
+    <style>
+        body {
+            background-color: var(--primary-dark);
+            color: white;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+    </style>
+</head>
+
+<body>
+
+  
+
+    <header class="navbar">
+        <a href="index.html" class="logo">MusicFy</a>
+        <div class="nav-links">
+            <button onclick="window.location.href='index.html'" class="back-btn">
+                ⬅
+            </button>
+        </div>
+    </header>
+
+    <div class="player-container">
+        <!-- Botón aleatorio -->
+
+        <!-- Pantalla principal -->
+        <div class="player-screen">
+            <img id="album-cover" src="images/albums/disco.gif" alt="Reproducción de música" class="gif-player">
+        </div>
+
+        <!-- Contenedor para los botones y el título -->
+        <div class="song-controls-container">
+            <button id="shuffle-btn" class="icon-btn">🔀</button>
+            <span id="song-title" class="song-title">Canción no seleccionada</span>
+            <button id="favorite-btn" class="icon-btn">❤️</button>
+        </div>
+        <div id="artist" class="artist">Artista desconocido</div>
+
+
+
+        <!-- Barra de progreso -->
+        <div class="progress-bar">
+            <div class="progress" id="progress"></div>
+        </div>
+
+        <!-- Controles -->
+        <div class="controls">
+            <button class="control-btn">⏮</button>
+            <button class="control-btn" id="playBtn">▶</button>
+            <button class="control-btn">⏭</button>
+        </div>
+    </div>
+
+
+    <script src="js/reproductor.js"></script>
+
+</body>
+
+</html>
